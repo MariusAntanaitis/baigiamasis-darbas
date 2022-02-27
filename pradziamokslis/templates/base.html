@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'pradziamokslis/styles/base.css' %}">
+
+    <title>Baigiamasis darbas</title>
+</head>
+<style>
+    body {background-color: azure;}
+    h1 {color: darkgray;}
+    h1 {text-shadow:2px 1px darkgray;}
+</style>
+
+<body>
+    <h1>Sveiki atvyke i python pradedanciuju kursus</h1>
+    <a href="https://codeacademy.lt/programavimo-kursai/python-pradedanciuju/">Code academy puslapis</a>
+    {% block header %}
+        
+    {% endblock header %}
+
+
+    {% block content %}
+
+    {% endblock content %}
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+   <form action="" method="POST">
+        {% csrf_token %}
+        <label for="number1">Iveskite pirmaji skaiciu:</label>
+        <input type="text" name="number1"><br>
+
+        <label for="number2">Iveskite antraji skaiciu:</label>
+        <input type="text" name="number2"><br>
+
+        <label for="action">Iveskite matematini zenkla(+, -, *, /)</label>
+        <input type="text" name="action"><br>
+
+        <input type="submit" value="OK">
+
+    </form>
+
+    {% if result %}
+        <label for="result">Result</label>
+        <input name="result" type="text" value={{ result }}>
+    {% endif %}
+
+    <div>
+        <a class="button" href="/">Grizti</a>
+    </div>
+    
+{% endblock content %}  

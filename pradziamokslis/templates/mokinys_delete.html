@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form method="post">{% csrf_token %}
+    <p>Ar tikrai norite istrinti "{{ object }}"?</p>
+    {{ form }}
+    <input type="submit" value="Confirm">
+</form>
+<a href="{% url 'students_list' %}">gryzti</a>
+
+{% endblock content %}  

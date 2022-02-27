@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    ul {border-style: dotted;}
+    ul {width:fit-content;}
+    li {border-bottom: dotted;}
+</style>
+<ul>
+    {% for mokinys in mokiniu_sarasas %}
+        <li>{{mokinys.vardas}} {{mokinys.pavarde}} {{mokinys.email}} {{mokinys.telefono_numeris}}</li>
+        <a href="{% url 'mokinys_update' mokinys.id %}">edit</a>
+        <a href="{% url 'mokinys_delete' mokinys.id %}">delete</a>
+    {% endfor %}
+</ul>
+
+<a href="/">Grizti atgal</a>
+
+{% endblock content %}  

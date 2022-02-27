@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p>Laikas  {{date_time}}</p>
+    <h2>Siuose kursuose susipazinsime su python programos pradmenimis pvz kaip : </h2>
+    <ol class="#">
+        {% for pamoka in pamoku_listas %}
+            <li>{{pamoka}}</li>
+        {% endfor %}
+    </ol>
+    <a class="button" href="math/">Matematika</a>
+    <div>
+        <a class="button" href="mokinys/create">Sukurti mokini</a>
+    </div>
+    <div>
+        <a class="button" href="mokiniai">Mokiniu sarasas</a>
+    </div>
+{% endblock content %}
